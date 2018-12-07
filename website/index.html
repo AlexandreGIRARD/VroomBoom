@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<link rel="icon" href="logo.png" />
+		<link rel="stylesheet" href="style.css" />
+        <title>Vroom Boom</title>
+    </head>
+
+    <body>
+    
+		<div class="banner">
+			<a href="group"><div id="button">
+				<p>EXPLOSIVE RAINBOW POOP</p>
+			</div></a>
+			
+			<div id="right">
+				<a href="http://vroom-boom.com"><div id="button">
+					<p>OUR GAME : VROOM BOOM</p>
+				</div></a>
+				<a href="blog"><div id="button">
+					<p>DEVELOPEMENT BLOG</p>
+				</div></a>
+			</div>
+		</div>
+		
+		<div class="main">
+		
+			<img class="parallax" src="images/background.png"/>
+			<div class="logo_div">
+				<img id="logo" src="images/logo_txt.png">
+			</div>
+			
+		
+		</div>
+		
+		<div class="features">
+		
+			<a style="text-decoration : none;" href="download"><div id="download-button">
+				<p>DOWNLOAD</p>
+			</div></a>
+		
+			<div id="citation">
+				<img id="left" src="images/banner_transparent_left.png">
+				<p id="text">"A CRAZY PROJECT"</p>
+				<img id="right" src="images/banner_transparent_right.png">
+				<p id="signature">fousage78<p>
+			</div>
+			
+			<div id="partners">
+				<div id="unity">
+					<p id="txt">POWERED BY</p>
+					<center><a href="https://unity3d.com" target="_blank"><img id="img" src="images/unity.png"></a><a href="https://www.blender.org" target="_blank"><img style="margin-left : 20px;" id="img" src="images/blender.png"></a></center>
+				</div>
+				
+				<div id="unity">
+					<p id="txt">WITH THE HELP OF</p>
+					<center><a href="https://www.epita.fr/" target="_blank"><img id="img" src="images/epita.png"></a></center>
+				</div>
+			</div>
+			
+			<div id="title"><p>OUR STORY</p></div>
+			
+			<div id="story">
+			
+				<div id="column_1">
+					<p>2049. Humanity has fallen into a huge nuclear war two decades ago. Everything has been destroyed, and 
+					the biggest nations of our world have been annihilated. </br></br>
+					Now, survivors are splitted into little colonies, which are scared of the powerfull clans and gangs. Those gangs are
+					composed of the strongest and awfullest criminals. They are raping, looting and destroying all the colonies
+					they meet on their road.</p>
+				</div>
+				
+				<div id="column_2">
+					<p>You are Joe Harrison. Your colonie, Skatis City, has been massacred by the Leïters, one of the biggest
+					clan of the country. They killed almost everyone, except you. One of the criminals, Meroh Sompsin, decided
+					to pick you up, and to bring you up, to make you the greatest <b>Rider</b> of the clan.</br></br>
+					You will fight in arenas all over the devastated USA after the nuclear apocalypse, against the most powerfull
+					riders of all the great clans and gang, and you will have to proove that you are the best</p>
+				</div>
+			
+			</div>
+			
+			<div id="title"><p>DISCOVER THE VROOM BOOM'S CARS</p></div>
+			
+			<div id="cars-div">
+			
+				<div id="cars-content">
+				
+				<div id="carsingle-div">
+					<img class="carlogo" id="ripper" src="images/cars/logo/ripper.png">
+				</div>
+				
+				<div id="carsingle-div">
+					<img class="carlogo" id="sandshark" src="images/cars/logo/sandshark.png">
+				</div>
+				
+				<div id="carsingle-div">
+					<img class="carlogo" id="bigchief" src="images/cars/logo/bigchief.png">
+				</div>
+				
+				<div id="carsingle-div">
+					<img class="carlogo" id="furnace" src="images/cars/logo/furnace.png">
+				</div>
+				
+				<div id="carsingle-div">
+					<img class="carlogo" id="scorcher" src="images/cars/logo/scorcher.png">
+				</div>
+				
+				</div>
+			
+			</div>
+			
+			<div id="car-preview">
+				<img id="car-preview-image" src="images/cars/visuals/ripper.png">
+			</div>
+			
+		</div>
+	
+    </body>
+	
+	<script>
+	//Set Variables
+	var enableDrag = false,
+		dragStartX = 0;
+	var marginLeftStart = 0;
+
+	// Enable dragging and set position on mousedown
+	$('#cars-div').mousedown(function(e) {
+
+		enableDrag = true;
+		dragStartX = e.pageX;
+		marginLeftStart = parseInt($('#cars-content').css("margin-left"));
+
+		e.preventDefault();
+	});
+
+	// set position of content if dargging is enabled.
+	$(document).unbind("mousemove");
+	$(document).mousemove(function(e) {
+
+		if (enableDrag) {
+
+			// Get the position of the drag.	
+			var delta = e.pageX - dragStartX;
+			if (marginLeftStart + delta > -670) {
+				if ( marginLeftStart + delta < 50) {
+					// Set the css. 
+					$('#cars-content').css("margin-left", marginLeftStart + delta);
+				}
+				else {
+					$('#cars-content').css("margin-left", 0);
+				}
+			} 
+			else {
+				$('#cars-content').css("margin-left", -620);
+			}
+		}
+
+		e.preventDefault();
+
+	});
+
+	// Disable dragging on "mouseup".
+	$(document).unbind("mouseup");
+	$(document).mouseup(function(e) {
+
+		if (enableDrag) {
+			enableDrag = false;
+		}
+
+		e.preventDefault();
+
+	});
+	
+	var ripper_button = document.getElementById("ripper");
+	var sandshark_button = document.getElementById("sandshark");
+	var bigchief_button = document.getElementById("bigchief");
+	var furnace_button = document.getElementById("furnace");
+	var scorcher_button = document.getElementById("scorcher");
+	
+	ripper_button.onclick = function(){
+		document.getElementById("car-preview-image").src = "images/cars/visuals/ripper.png";
+	}
+	
+	sandshark_button.onclick = function(){
+		document.getElementById("car-preview-image").src = "images/cars/visuals/sandshark.png";
+	}
+	
+	bigchief_button.onclick = function(){
+		document.getElementById("car-preview-image").src = "images/cars/visuals/bigchief.png";
+	}
+	
+	furnace_button.onclick = function(){
+		document.getElementById("car-preview-image").src = "images/cars/visuals/furnace.png";
+	}
+	
+	scorcher_button.onclick = function(){
+		document.getElementById("car-preview-image").src = "images/cars/visuals/scorcher.png";
+	}
+	
+	
+	</script>
+</html>
