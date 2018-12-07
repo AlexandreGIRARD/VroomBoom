@@ -1,0 +1,551 @@
+body {
+	background-color:#210002;
+	margin : 0;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffaf00;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(205, 125, 0);
+}
+::-webkit-scrollbar-thumb:active {
+  background: rgb(155, 75, 0);
+}
+::-webkit-scrollbar-track {
+  background: #210002;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #210002;
+}
+::-webkit-scrollbar-track:active {
+  background: #210002;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+p, h1, h2, h3, a, li, b, span, ul {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+}
+
+.banner {
+	background-color:#61210B;
+	height : 30px;
+	width : 100%;
+	position : fixed;
+	z-index : 10;
+}
+
+.banner a {
+	color : white;
+	text-decoration : none;
+}
+
+.banner #button {
+	margin : 0;
+	width : 200px;
+}
+
+.banner #button:hover {
+	background-color:#2A120A;
+}
+
+.banner p {
+	margin : 0;
+	font-size : 13px;
+	line-height : 30px;
+	text-align : center;
+	font-weight : bold;
+}
+
+.banner #right {
+	width : 400px;
+	position : absolute;
+	top : 0px;
+	right : 0px;
+	display : flex;
+}
+
+.main {
+	width : 100%;
+	height : 100vh;
+	position : relative;
+	overflow : hidden;
+}
+
+/* PARALAX EFFECT */
+
+.parallax {
+	position : absolute;
+	top : 0;
+	left : 0;
+	width : 100%;
+	height : 100vh;
+	z-index : -2;
+}
+
+/* MAIN */
+
+.logo_div {
+	margin-top : 150px;
+	margin-left : 100px;
+	width : 400px;
+	height : auto;
+}
+
+.logo_div #logo {
+	margin-left : 25px;
+	width : 400px;
+	opacity : 1;
+}
+
+.logo_div #text {
+	font-size : 25px;
+	text-align : center;
+}
+
+.features {
+	background-color : #210002;
+	padding-top : 1px;
+	padding-left : 150px;
+	padding-right : 150px;
+	padding-bottom : 20px;
+}
+
+.features #download-button {
+	margin : auto;
+	margin-top : 50px;
+	width : 350px;
+	height : 80px;
+	border : 3px solid #ffaf00;
+	transition : 0.3s;
+}
+
+.features #download-button:hover {
+	cursor : pointer;
+	background-color : #ffaf00;
+	transition : 0.3s;
+}
+
+.features #download-button:hover p {
+	color : #210002;
+	transition : 0.3s;
+}
+
+.features #download-button p {
+	margin : 0px;
+	font-size : 42px;
+	line-height : 80px;
+	color : #ffaf00;
+	text-align : center;
+	transition : 0.3s;
+}
+
+.features #citation {
+	width : 800px;
+	height : 90px;
+	background-color : #ffaf00;
+	margin-top : 50px;
+	margin-left : auto;
+	margin-right : auto;
+	position : relative;
+	display : flex;
+	justify-content : space-between;
+}
+
+.features #citation #left {
+	position : absolute;
+	left : 0px;
+	height : 90px;
+}
+
+.features #citation #text {
+	width : 800px;
+	text-align : center;
+	font-size : 40px;
+	color : #210002;
+	margin : 0;
+	line-height : 90px;
+}
+
+.features #citation #right {
+	position : absolute;
+	right : 0px;
+	height : 90px;
+}
+
+.features #citation #signature{
+	position : absolute;
+	font-size: 12px;
+	color : #210002;
+	bottom : 0px;
+	right : 90px;
+	font-style : italic;
+}
+
+.features #partners {
+	width : 100%;
+	margin-top : 50px;
+	height : 200px;
+	display : flex;
+	justify-content : space-around;
+}
+
+.features #partners #unity {
+	width : 45%;
+	position : relative;
+}
+
+.features #partners #unity #txt{
+	color : #ffaf00;
+	font-size : 15px;
+	text-align : center;
+}
+
+.features #partners #unity #img{
+	width : 150px;
+}
+
+.features #title {
+	margin-top : 55px;
+	margin-left : 5%;
+	margin-right : 5%;
+	border-bottom : 2px solid #ffaf00;
+	font-size : 20px;
+	text-align : center;
+	color : #ffaf00;
+}
+
+.features #story {
+	margin-top : 10px;
+	display : flex;
+	justify-content : space-around;
+}
+
+.features #story #column_1, .features #story #column_2 {
+	font-weight : normal;
+	color : white;
+	text-align : justify;
+	width : 40%;
+}
+
+.features #cars-div {
+	width : 80%;
+	height : 150px;
+	overflow : hidden;
+	margin : auto;
+	margin-top : 15px;
+	background-color : #ffaf00;
+	border-radius : 8px;
+}
+
+.features #cars-div #cars-content {
+	float : left;
+	width : 2000px;
+	display : flex;
+}
+
+.features #cars-div #cars-content #carsingle-div {
+	height : 100%;
+	width : auto;
+}
+
+.features #cars-div #cars-content #carsingle-div .carlogo {
+	display : block;
+	height : 100px;
+	margin-top : 25px;
+	transition : 0.4s;
+}
+
+.features #cars-div #cars-content #carsingle-div:hover .carlogo {
+	height : 120px;
+	margin-top : 15px;
+	cursor : pointer;
+	transition : 0.4s;
+}
+
+.features #car-preview {
+	width : 80%;
+	margin : auto;
+	margin-top : 10px;
+}
+
+.features #car-preview #car-preview-image {
+	width: 70%;
+	display : block;
+	margin : auto;
+	margin-top : 15px;
+	margin-bottom : 15px;
+	transition : 0.4s;
+}
+
+/* BLOG SECTION */
+
+.img_head {
+	width : 100%;
+	height : 300px;
+	background-image: url("images/background.png");
+	background-size : 100% auto;
+	background-position: center 70%;
+	padding-top: 1px;
+    margin-top: -1px;
+	overflow : hidden;
+}
+
+.img_head_rnb {
+	width : 100%;
+	height : 280px;
+	background-image: url("images/rainbow.gif");
+	padding-top: 1px;
+    margin-top: -1px;
+	overflow : hidden;
+}
+
+.img_head_group {
+	width : 100%;
+	height : 400px;
+	background-image: url("images/banner_erp.png");
+	background-size : 100% ;
+	background-repeat: no-repeat;
+	padding-top: 1px;
+    margin-top: -1px;
+	overflow : hidden;
+}
+
+.img_head #title {
+	width : 600px;
+	height : 60px;
+	border : 3px solid #ffaf00;
+	padding : 10px;
+	margin-left : auto;
+	margin-right : auto;
+	margin-top : 120px;
+}
+
+.img_head #title #text {
+	font-size : 40px;
+	color : #ffaf00;
+	line-height : 60px;
+	text-align : center;
+	margin : 0;
+}
+
+.group_body {
+	width : 80%;
+	height : auto;
+	margin : auto;
+	position : relative;
+}
+
+.group_body #introduction {
+	color : white;
+	font-size : 24px;
+	text-align : center;
+}
+
+.group_body #erp_logo {
+	display : block;
+	width : 450px;
+	margin : auto;
+}
+
+.group_body #presentation_group {
+	margin-top : 40px;
+	margin-bottom : 40px;
+	color : white;
+	font-size : 18px;
+	text-align : justify;
+}
+
+.group_body .member {
+	width : 80%;
+	height  : 300px;
+	margin : auto;
+	margin-top : 25px;
+	color : white;
+	display : flex;
+	justify-content : space-around;
+}
+
+.group_body .member #picture {
+	width : 25%;
+	margin-right : 10px;
+}
+
+.group_body .member #picture #photo {
+	width : 80%;
+	display : block;
+	margin : auto;
+}
+
+.group_body .member #text {
+	width : 75%;
+	display : flex;
+	flex-direction : column;
+}
+
+.group_body .member #text #nom {
+	height : 10%;
+	border-bottom : 2px solid #FF4000;
+}
+
+.group_body .member #text #nom h2{
+	margin : 0;
+}
+
+.group_body .member #text #desc {
+	text-align : justify;
+}
+
+.blog_body {
+	width : 100%;
+	height : auto;
+	margin : 0;
+	background-color : white;
+	position : relative;
+}
+		
+.article {
+	width : 80%;
+	height : 500px;
+	margin-left : 10%;
+	margin-right : 10%;
+	position : relative;
+}
+
+.article #title {
+	font-weight : bold;
+	color : #ffaf00;
+	font-size : 20px;
+	position : absolute;
+	top : 0;
+	left : 0;
+	width : 90%;
+}
+
+.article #author {
+	font-weight : bold;
+	color : black;
+	font-size : 12px;
+	position : absolute;
+	top : 30px;
+	left : 0;
+	width : 90%;
+}
+
+.article #date {
+	width : 50px;
+	height : 50px;
+	border-radius : 25px;
+	background-color : #ffaf00;
+	position : absolute;
+	right : 0;
+	top : 5px;
+}
+
+.article #date p {
+	font-size : 20px;
+	text-align : center;
+	margin : 0;
+}
+
+.article #pic {
+	position : absolute;
+	top : 60px;
+	width : 100%;
+	height : 200px;
+	overflow : hidden;
+}
+
+.article #pic #img {
+	margin-top : -15%;
+	width : 100%;
+}
+
+.article #text {
+	width : 100%;
+	position : absolute;
+	top : 250px;
+	border-bottom : 3px dotted #ffaf00;
+}
+
+.article #text p {
+	text-align : justify;
+}
+
+.article #question {
+	font-weight : bold;
+	margin-top : 10px;
+}
+
+.article #reponse {
+	text-decoration : justify;
+	padding-left : 15px;
+	font-style : italic;
+	color : rgb(55,55,55);
+}
+
+/* DOWNLOAD PAGE */ 
+
+ #presentation {
+	margin : 0px;
+	margin-top : 15px;
+	margin-left : 20%;
+	margin-right : 20%;
+	color : white;
+	text-align : justify;
+	font-size : 18px;
+}
+
+#down-link {
+	display : block;
+	margin : auto;
+	margin-top : 50px;
+	width : 400px;
+	height : 80px;
+	transition : 0.3s;
+	text-decoration : none;
+}
+
+#down-button {
+	margin : auto;
+	margin-top : 50px;
+	width : 400px;
+	height : 80px;
+	border : 3px solid #ffaf00;
+	transition : 0.3s;
+}
+
+#down-button:hover {
+	cursor : pointer;
+	background-color : #ffaf00;
+	transition : 0.3s;
+}
+
+#down-button p {
+	margin : 0px;
+	font-size : 36px;
+	line-height : 80px;
+	color : #ffaf00;
+	text-align : center;
+	transition : 0.3s;
+}
+
+#down-button:hover p {
+	color : #210002;
+	transition : 0.3s;
+}
